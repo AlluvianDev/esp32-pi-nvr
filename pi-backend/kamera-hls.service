@@ -1,0 +1,12 @@
+[Unit]
+Description=ESP32 HLS Stream
+After=network.target
+
+[Service]
+User=YOUR_PI_USERNAME
+ExecStart=/usr/bin/ffmpeg -fflags nobuffer -flags low_delay -use_wallclock_as_timestamps 1 -i http://192.168.1.100:81/stream -c:v libx264 -preset ultrafast -tune zerolatency -pix_fmt yuv420p -r 15 -f tee -map 0:v "[f=hls:hls_time=1:hls_list_size=3:hls_flags=delete_segments]/YOUR/RECORDING/PATH/live.m3u8|[f=hls:hls_time=2:hls_list_size=0]/YOUR/RECORDING/PATH/history.m3u8"
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
