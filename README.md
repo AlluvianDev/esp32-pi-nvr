@@ -174,6 +174,3 @@ esp32-pi-nvr/
 
 ---
 
-## License
-
-This project is open source. See [LICENSE](LICENSE) for details.
