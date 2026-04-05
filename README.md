@@ -1,3 +1,4 @@
+(outdated, will be updated soon)
 # ESP32-Pi-NVR: Edge Security Camera & DVR System
 
 > An end-to-end, self-hosted IoT security camera and Network Video Recorder (NVR) pipeline. Captures an MJPEG stream from an ESP32-CAM, transcodes it in real-time on a Raspberry Pi 5 via FFmpeg hardware acceleration into ultra-low latency HLS, and serves it through a secure PHP web dashboard.
