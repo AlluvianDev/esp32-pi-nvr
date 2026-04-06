@@ -10,7 +10,7 @@ from datetime import datetime
 from flask import Flask, request, jsonify, send_from_directory, render_template, Response
 from flask_cors import CORS
 from dotenv import load_dotenv
-load.dotenv()
+load_dotenv()
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from routes.system_routes import system_bp
